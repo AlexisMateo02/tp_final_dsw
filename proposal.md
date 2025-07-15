@@ -13,13 +13,10 @@
 
 ## Tema
 ### Descripción
-*El sistema a desarrollar será una plataforma web enfocada a la compra y venta de embarcaciones de río, así como también de diferentes accesorios náuticos.
-El sistema contará con dos roles principales: vendedores y compradores.
-Los compradores podrán explorar el catálogo, consultar los perfiles de los vendedores, comparar sus productos de interés y concretar compras directamente desde el sistema, sin necesidad de contacto o intermediación con el vendedor, realizando los pagos directamente desde la página y retirando el/los producto/s en un punto de retiro especificado por el vendedor.
-Los vendedores podrán publicar embarcaciones y accesorios para la venta de las mismas, actualizar precios, y gestionar pedidos y/o disponibilidad.*
+*El sistema a desarrollar será una Plataforma web para la compra y venta de productos náuticos usados, como kayaks, remos y accesorios. Los usuarios pueden registrarse como compradores y/o vendedores, publicar artículos, gestionar entregas, realizar compras y dejar valoraciones.*
 
-### Modelo
-![Modelo de Dominio](docs/md_tp_dsw.png)
+### Diagrama de Entidad-Relación
+![Diagrama de Entidad-Relación](docs/der_tp_dsw.png)
 
 ## Alcance Funcional 
 
@@ -28,23 +25,23 @@ Los vendedores podrán publicar embarcaciones y accesorios para la venta de las 
 Regularidad
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Usuario<br>2. CRUD Compra<br>3. CRUD Publicacion<br>4. CRUD Localidad|
-|CRUD dependiente|1. CRUD Valoracion {depende de} CRUD Usuario<br>2. CRUD Punto Entrega {depende de} CRUD Publicacion/ CRUD Localidad|
-|Listado<br>+<br>detalle| 1. Listado de compras filtrado por un usuario (comprador) y un rango de fechas de compra, muestra monto total y estado de la compra => detalle CRUD Compra<br> 2. Listado de publicaciones filtrado por rango de precios y por si es un pack o no, muestra fecha, estado y precio de la publicación => detalle muestra datos completos de la publicación, del punto de entrega y del usuario (vendedor)|
-|CUU/Epic|1. Realizar la publicación de una venta<br>2. Valorar a otro usuario como vendedor|
+|CRUD simple|1. CRUD Tipo_Kayak<br>2. CRUD Tipo_Articulo<br>3. CRUD Localidad<br>4. CRUD Provincia|
+|CRUD dependiente|1. CRUD Producto {depende de} Tipo_Kayak / Tipo_Articulo<br>2. CRUD Usuario (Comprador/Vendedor) {depende de} Localidad|
+|Listado<br>+<br>detalle| 1. Listado de publicaciones filtrado por estado (activa, vendida) => detalle muestra productos, precio total y punto de entrega<br> 2. Listado de productos filtrado por tipo => detalle muestra descripción y datos técnicos|
+|CUU/Epic|1. Publicar productos para la venta (gestión completa de una publicación)<br>2. Realizar una compra (selección de publicaciones + pago)|
 
 
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD |1. CRUD Usuario<br>2. CRUD Compra<br>3. CRUD Publicacion<br>4. CRUD Localidad<br>5. CRUD Valoracion<br>6. CRUD Punto Entrega<br>7. CRUD Item Publicacion<br>8. CRUD Producto<br>9. CRUD Articulo<br>10. CRUD Embarcacion<br>11. CRUD Tipo Embarcacion<br>12. Pago|
-|CUU/Epic|1. Publicar una oferta de venta de un producto o pack<br>2. Realizar la compra de una publicación<br>3. Realizar el pago de una compra<br>4. Valorar al vendedor tras la compra|
+|CRUD |1. CRUD Tipo_Kayak<br>2. CRUD Tipo_Articulo<br>3. CRUD Localidad<br>4. CRUD Provincia<br>5. CRUD Producto<br>6. CRUD Punto_Entrega<br>7. CRUD Usuario (Comprador/Vendedor)|
+|CUU/Epic|1. Publicar productos para la venta<br>2. Realizar una compra  mediante múltiples pagos<br>3. Valorar a un vendedor<br>4. Consultar el historial de compras y ventas realizadas<br>5. Gestionar publicaciones existentes, incluyendo modificación<br>6. Consultar pagos realizados en compras|
 
 
 ### Alcance Adicional Voluntario
 
 |Req|Detalle|
 |:-|:-|
-|Listados |1. Listado de usuarios con mejor reputación filtrado por provincia o localidad, mostrando cantidad de ventas y puntaje promedio<br>2. Listado de productos más vendidos (por cantidad en líneas de compra), con opción de filtrar por rango de fechas|
-|CUU/Epic|1. Realizar el pago de una compra mediante cuotas<br>2. Cancelar una de compra|
-|Otros|1. Envío de notificación por email al vendedor cuando un usuario realiza una compra|
+|Listados |1. Historial de compras de un comprador con filtros por fecha y estado<br>2. Ventas realizadas por un vendedor con detalle de publicaciones y puntos de entrega|
+|CUU/Epic|1. Edición de publicaciones (solo si están activas)<br>2.  Cancelar una compra pendiente|
+|Otros|1. Envío de notificación por email al concretar una compra|
