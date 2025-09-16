@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Node/Vite
+node_modules
+dist
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env & editor
+.env
+.env.*
+!.env.example
+.vscode
+
