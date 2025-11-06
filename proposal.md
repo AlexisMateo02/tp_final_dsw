@@ -13,9 +13,9 @@
 
 ## Tema
 ### Descripción
-*El sistema a desarrollar será una Plataforma web para la compra y venta de productos náuticos usados, como kayaks, remos y accesorios. 
-Los usuarios podran registrarse, realizar compras, gestionar entregas, y dejar valoraciones de nuestros productos.
-En paralelo la plataforma ofrecera un foro de ventas en donde los usuario podran realizar publicaciones, con la cual otros usuarios se podran contactar con los vendedores si le intersa.*
+*El sistema a desarrollar será una plataforma web para la compra y venta de productos náuticos usados, como kayaks, remos y accesorios.
+Los usuarios podrán registrarse, realizar compras, gestionar entregas y dejar valoraciones de nuestros productos.
+En paralelo, la plataforma ofrecerá un foro de ventas en donde los usuarios podrán realizar publicaciones, en el cual otros usuarios se podrán contactar con los vendedores si les interesa.*
 
 ### Diagrama de Entidad-Relación
 ![Diagrama de Entidad-Relación](docs/der_tp_dsw.png)
