@@ -18,7 +18,7 @@ Los usuarios podrán registrarse, realizar compras, gestionar entregas y dejar v
 En paralelo, la plataforma ofrecerá un foro de ventas en donde los usuarios podrán realizar publicaciones, en el cual otros usuarios se podrán contactar con los vendedores si les interesa.*
 
 ### Diagrama de Entidad-Relación
-![Diagrama de Entidad-Relación](docs/der_tp_dsw.png)
+![Diagrama de Entidad-Relación](docs/DSW_MD_y_DER-DER.drawio.png)
 
 ## Alcance Funcional 
 
