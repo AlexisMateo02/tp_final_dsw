@@ -28,7 +28,7 @@ Regularidad
 |Req|Detalle|
 |:-|:-|
 |CRUD simple|1. CRUD Tipo_Kayak<br>2. CRUD Tipo_Articulo<br>3. CRUD Localidad<br>4. CRUD Provincia|
-|CRUD dependiente|1. CRUD Producto {depende de} Tipo_Kayak / Tipo_Articulo/ Tipo_Embarcacion/ Tipo_SUP<br>2. CRUD Punto de entrega {depende de} Localidad|<br>3. CRUD Localidad {depende de} Provincia
+|CRUD dependiente|1. CRUD Producto {depende de} Tipo_Kayak / Tipo_Articulo/ Tipo_Embarcacion/ Tipo_SUP<br>2. CRUD Punto de entrega {depende de} Localidad<br>3. CRUD Localidad {depende de} Provincia
 |Listado<br>+<br>detalle| 1. Listado de publicaciones filtrado por estado (activa, vendida) => detalle muestra productos, precio total y punto de entrega<br> 2. Listado de productos filtrado por tipo => detalle muestra descripción y datos técnicos|
 |CUU/Epic|1. Publicar productos para la venta (gestión completa de una publicación)<br>2. Realizar una compra (selección de publicaciones + pago)|
 
